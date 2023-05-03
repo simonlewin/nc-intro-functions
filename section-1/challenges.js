@@ -1,6 +1,6 @@
 const { check, runTest, skipTest } = require("../test-api/index.js");
 
-// Exercise 0
+// Challenge 0
 
 // This function should be called return the product of two passed numbers.
 
@@ -12,7 +12,7 @@ runTest("multiply() can multiply 2 numbers together", function () {
   check(multiply(-180, 2)).isEqualTo(-360);
 });
 
-// Exercise 1
+// Challenge 1
 
 // roundDown() {}
 
@@ -27,7 +27,7 @@ skipTest(
   }
 );
 
-// Exercise 2
+// Challenge 2
 
 // This function should take two arguments, m and n, and return m raised to the power of n.
 
@@ -39,7 +39,7 @@ skipTest("raiseToPower() raises given number to the given power", function () {
   check(raiseToPower(10, 0)).isEqualTo(1);
 });
 
-// Exercise 3
+// Challenge 3
 
 // This function should take a number as an argument, and return true if it is a multiple of 6, and false otherwise.
 
@@ -57,7 +57,7 @@ skipTest(
   }
 );
 
-// Exercise 4
+// Challenge 4
 
 // This function should take a string as an argument and return the same string with the first letter capitalised.
 
@@ -72,7 +72,7 @@ skipTest(
   }
 );
 
-// Exercise 5
+// Challenge 5
 
 // This function should take a number as an argument representing a year, 
 // and return true if that year is in the 20th century and false otherwise.
@@ -92,7 +92,7 @@ skipTest(
   }
 );
 
-// Exercise 6
+// Challenge 6
 
 // This function should take a string as an argument representing a file path and return true if it is an absolute path, and false otherwise.
 
@@ -114,7 +114,7 @@ skipTest(
   }
 );
 
-// Exercise 7
+// Challenge 7
 
 /*
 
@@ -139,7 +139,7 @@ skipTest(
   }
 );
 
-// Exercise 8
+// Challenge 8
 
 // This function should take a length and a character as arguments and return an array of the given length populated with the given character.
 
@@ -153,7 +153,7 @@ skipTest(
   }
 );
 
-// Exercise 9
+// Challenge 9
 /*
 This function should take a number representing a battery level as a percentage
 If the battery level is less than or equal to 5%, then you should return a string stating:
@@ -192,7 +192,7 @@ skipTest(
   }
 );
 
-// Exercise 10
+// Challenge 10
 
 // This function should take an array as an argument and return an array containing all string elements from the input (retaining the order)
 
@@ -205,6 +205,6 @@ skipTest("collectStrings() can get all the strings from an array", function () {
 
 /******* Refactor Bonus Challenge *******
 
-1. Exercise 5 - complete this problem without resorting to if statements!
+1. Challenge 5 - complete this problem without resorting to if statements!
 2. Refactor every function into an ES6 arrow function () => {}
 */
