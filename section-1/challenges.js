@@ -31,7 +31,7 @@ skipTest('working with nested arrays', function () {
   const rows = [
     ['a', 'b', 'c'],
     ['d', 'e', 'f'],
-    ['g', 'h', 'i']
+    ['g', 'h', 'i'],
   ];
 
   check(FILL_ME_IN).isEqualTo(rows[0]);
@@ -49,11 +49,11 @@ skipTest('working with nested arrays', function () {
 
 // Exercise 4
 // once you have passed the test above, change skipTest below to runTest so you are able to run the next test
-skipTest('Task 6', function () {
+skipTest('check object properties', function () {
   const father = {
     firstName: 'Michael',
     lastName: 'Bluth',
-    age: 33
+    age: 33,
   };
 
   check(FILL_ME_IN).isEqualTo(father.firstName);
@@ -64,11 +64,11 @@ skipTest('Task 6', function () {
 
 // Exercise 5
 // once you have passed the test above, change skipTest below to runTest so you are able to run the next test
-skipTest('Task 7', function () {
+skipTest('remove object properties', function () {
   const brotherInLaw = {
     name: 'Tobias',
     lastname: 'Funke',
-    job: 'therapist'
+    job: 'therapist',
   };
 
   check(FILL_ME_IN).isEqualTo(brotherInLaw.job);
@@ -78,16 +78,16 @@ skipTest('Task 7', function () {
 
 // Exercise 6
 // once you have passed the test above, change skipTest below to runTest so you are able to run the next test
-skipTest('Task 8', function () {
+skipTest('working with nested objects', function () {
   const bluthFamily = {
     father: {
-      name: 'George'
+      name: 'George',
     },
     mother: {
-      name: 'Lucille'
+      name: 'Lucille',
     },
     sons: [{ name: 'GOB' }, { name: 'Michael' }, { name: 'Buster' }],
-    daughters: [{ name: 'Lindsay' }]
+    daughters: [{ name: 'Lindsay' }],
   };
 
   check(FILL_ME_IN).isEqualTo(bluthFamily.father.name);
