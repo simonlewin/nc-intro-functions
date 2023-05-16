@@ -1,4 +1,4 @@
-const { check, runTest, skipTest } = require("../../test-api/index.js");
+const { check, runTest, skipTest } = require("../test-api/index.js");
 
 /*
 An ordinal suffix are the letters we put after a number:

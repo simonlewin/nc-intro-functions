@@ -1,5 +1,4 @@
-const { check, runTest } = require("../../test-api/index.js");
-
+const { check, runTest } = require("../test-api/index");
 /*
 In a factory a printer prints labels for boxes. For one kind of boxes the printer has to use colors which are named with letters from a to m.
 

@@ -1,4 +1,4 @@
-const { check, runTest } = require("../../test-api/index.js");
+const { check, runTest } = require("../test-api/index");
 
 function containsNoRepeats(str) {
   // This function should take a string as its argument and return true if each character appears only once and false otherwise
