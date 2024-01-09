@@ -14,9 +14,7 @@ skipTest("multiply() can multiply 2 numbers together", function () {
 
 // Challenge 1
 
-function roundDown(a) {
-  return Math.floor(a);
-}
+const roundDown = (a) => Math.floor(a);
 
 // This function should take a single argument and return its value rounded DOWN to the nearest integer.
 
