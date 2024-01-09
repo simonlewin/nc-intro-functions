@@ -4,9 +4,7 @@ const { check, runTest, skipTest } = require("../test-api/index.js");
 
 // This function should be called return the product of two passed numbers.
 
-function multiply(a, b) {
-  return a * b;
-}
+const multiply = (a, b) => a * b;
 
 skipTest("multiply() can multiply 2 numbers together", function () {
   check(multiply(3, 5)).isEqualTo(15);
