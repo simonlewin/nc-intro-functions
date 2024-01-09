@@ -65,11 +65,9 @@ skipTest(
 
 // This function should take a string as an argument and return the same string with the first letter capitalised.
 
-function capitaliseFirstLetter(string) {
-  return string[0].toUpperCase() + string.substring(1);
-}
+const capitaliseFirstLetter = (string) => string.charAt(0).toUpperCase() + string.substring(1);
 
-skipTest(
+runTest(
   "capitaliseFirstLetter() capitalises the first letter in a string",
   function () {
     check(capitaliseFirstLetter("bang")).isEqualTo("Bang");
