@@ -115,7 +115,7 @@ function isAbsolutePath(path) {
   return path.startsWith("/");
 }
 
-runTest(
+skipTest(
   "isAbsolutePath() checks if a file path is absolute or relative",
   function () {
     check(isAbsolutePath("/Users/mitch")).isEqualTo(true);
@@ -141,8 +141,11 @@ The returned string should be in the following format:
 */
 
 // getCharCode()
+function getCharCode(char) {
+  return `The ASCII code for ${char} is ${char.charCodeAt(0)}`
+}
 
-skipTest(
+runTest(
   "getCharCode() will return a message stating the ASCII code of a passed char",
   function () {
     check(getCharCode("A")).isEqualTo("The ASCII code for A is 65");
