@@ -73,7 +73,7 @@ function capitaliseFirstLetter(string) {
   return string[0].toUpperCase() + string.substring(1);
 }
 
-runTest(
+skipTest(
   "capitaliseFirstLetter() capitalises the first letter in a string",
   function () {
     check(capitaliseFirstLetter("bang")).isEqualTo("Bang");
@@ -87,9 +87,11 @@ runTest(
 // This function should take a number as an argument representing a year, 
 // and return true if that year is in the 20th century and false otherwise.
 
-// isInThe20thCentury()
+function isInThe20thCentury(n) {
+  return n >= 1901 && n <= 2000;
+}
 
-skipTest(
+runTest(
   "isInThe20thCentury() checks if a number is within 1901 to 2000 (inclusive)",
   function () {
     check(isInThe20thCentury(1962)).isEqualTo(true);
