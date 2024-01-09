@@ -65,9 +65,10 @@ skipTest(
 
 // This function should take a string as an argument and return the same string with the first letter capitalised.
 
-const capitaliseFirstLetter = (string) => string.charAt(0).toUpperCase() + string.substring(1);
+const capitaliseFirstLetter = (string) =>
+  string.charAt(0).toUpperCase() + string.substring(1);
 
-runTest(
+skipTest(
   "capitaliseFirstLetter() capitalises the first letter in a string",
   function () {
     check(capitaliseFirstLetter("bang")).isEqualTo("Bang");
@@ -81,9 +82,7 @@ runTest(
 // This function should take a number as an argument representing a year,
 // and return true if that year is in the 20th century and false otherwise.
 
-function isInThe20thCentury(n) {
-  return n >= 1901 && n <= 2000;
-}
+const isInThe20thCentury = (n) => n > 1900 && n < 2001;
 
 skipTest(
   "isInThe20thCentury() checks if a number is within 1901 to 2000 (inclusive)",
@@ -156,13 +155,8 @@ skipTest(
 // This function should take a length and a character as arguments and return an array of the given length populated with the given character.
 
 // createArray()
-function createArray(length, character) {
-  const array = [];
-  for (let i = 0; i < length; i++) {
-    array.push(character);
-  }
-  return array;
-}
+const createArray = (length, character) =>
+  Array.from({ length }, () => character);
 
 skipTest(
   "createArray() creates an array of the specified length using a specified character",
