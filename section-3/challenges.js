@@ -63,16 +63,21 @@ runTest(
 );
 
 // Exercise 4
+// This function should take a string representing a traffic light colour as an argument
+// It will be one of "red", "green" or "amber" in either uppercase or lowercase
+// You should return a corresponding message
 function readTrafficLight(colour) {
-  // This function should take a string representing a traffic light colour as an argument
-  // It will be one of "red", "green" or "amber" in either uppercase or lowercase
-  // You should return a corresponding message
-  if (colour.toLowerCase() === "green") {
-    return "GO!";
-  } else if (colour.toLowerCase() === "amber") {
-    return "GET READY...";
-  } else if (colour.toLowerCase() === "red") {
-    return "STOP!";
+  const lowerCaseColour = colour.toLowerCase();
+
+  switch (lowerCaseColour) {
+    case "green":
+      return "GO!";
+    case "amber":
+      return "GET READY...";
+    case "red":
+      return "STOP!";
+    default:
+      return "Invalid traffic light color";
   }
 }
 
