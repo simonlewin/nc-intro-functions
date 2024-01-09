@@ -190,7 +190,7 @@ const checkBatteryLevel = (level) => {
   if (level === 100) {
     return `Fully charged :)`;
   }
-}
+};
 
 skipTest(
   "checkBatteryLevel() should return a message with info about the battery level",
@@ -223,9 +223,7 @@ skipTest(
 // This function should take an array as an argument and return an array containing all string elements from the input (retaining the order)
 
 // collectStrings()
-function collectStrings(array) {
-  return array.filter((el) => typeof el === "string");
-}
+const collectStrings = (array) => array.filter((el) => typeof el === "string");
 
 runTest("collectStrings() can get all the strings from an array", function () {
   check(collectStrings(["a", "b", "c"])).isEqualTo(["a", "b", "c"]);
