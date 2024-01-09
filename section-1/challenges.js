@@ -64,7 +64,7 @@ skipTest("check object properties", function () {
 
 // Exercise 5
 // once you have passed the test above, change skipTest below to runTest so you are able to run the next test
-runTest("remove object properties", function () {
+skipTest("remove object properties", function () {
   const brotherInLaw = {
     name: "Tobias",
     lastname: "Funke",
@@ -78,7 +78,7 @@ runTest("remove object properties", function () {
 
 // Exercise 6
 // once you have passed the test above, change skipTest below to runTest so you are able to run the next test
-skipTest("working with nested objects", function () {
+runTest("working with nested objects", function () {
   const bluthFamily = {
     father: {
       name: "George",
@@ -90,9 +90,9 @@ skipTest("working with nested objects", function () {
     daughters: [{ name: "Lindsay" }],
   };
 
-  check(FILL_ME_IN).isEqualTo(bluthFamily.father.name);
-  check(bluthFamily.mother.name).isEqualTo(FILL_ME_IN);
-  check(bluthFamily.daughters[FILL_ME_IN].FILL_ME_IN).isEqualTo("Lindsay");
+  check("George").isEqualTo(bluthFamily.father.name);
+  check(bluthFamily.mother.name).isEqualTo("Lucille");
+  check(bluthFamily.daughters[0].name).isEqualTo("Lindsay");
 });
 
 // >>>>>>>>>>> DON'T ALTER ANYTHING BELOW THIS LINE <<<<<<<<<<<<<<<
