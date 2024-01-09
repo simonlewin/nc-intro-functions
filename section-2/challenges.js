@@ -170,7 +170,7 @@ function createArray(length, character) {
   return array;
 }
 
-runTest(
+skipTest(
   "createArray() creates an array of the specified length using a specified character",
   function () {
     check(createArray(3, "!")).isEqualTo(["!", "!", "!"]);
@@ -190,8 +190,17 @@ If the battery level is 100% then it should return a string stating:
 */
 
 // checkBatteryLevel()
+function checkBatteryLevel(level) {
+  if (level <= 5) {
+    return `Warning - battery level low: ${level}%, please charge your device`;
+  } else if (level > 5 && level <= 99) {
+    return `Battery level: ${level}%`;
+  } else if (level === 100) {
+    return `Fully charged :)`;
+  }
+}
 
-skipTest(
+runTest(
   "checkBatteryLevel() should return a message with info about the battery level",
   function () {
     check(checkBatteryLevel(100)).isEqualTo("Fully charged :)");
