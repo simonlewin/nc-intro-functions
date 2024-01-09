@@ -26,8 +26,7 @@ runTest("isEmptyArray() checks if an array is empty", function () {
 });
 
 //Exercise 3
-function createProfileDescription(user) {
-  /*
+/*
   This function should take an object representing a person and information about whether they like to code
 
   A user object will take this form:
@@ -44,12 +43,12 @@ function createProfileDescription(user) {
   
   This is a good use case for String Template Literals:
   https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Template_literals
-  */
+*/
 
-  return `My name is ${user.name} and I ${
+const createProfileDescription = (user) =>
+  `My name is ${user.name} and I ${
     user.likesToCode ? "like" : "don't like"
   } to code.`;
-}
 
 runTest(
   "createProfileDescription() will create a sentence about a whether a person likes to code or not",
