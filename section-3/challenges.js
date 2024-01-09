@@ -24,14 +24,14 @@ function isEmptyArray(array) {
   return array.length === 0;
 }
 
-runTest("isEmptyArray() checks if an array is empty", function () {
+skipTest("isEmptyArray() checks if an array is empty", function () {
   check(isEmptyArray([])).isEqualTo(true);
   check(isEmptyArray(["a", "b", "c", "d"])).isEqualTo(false);
   check(isEmptyArray(["a"])).isEqualTo(false);
 });
 
 //Exercise 3
-function createProfileDescription() {
+function createProfileDescription(user) {
   /*
   This function should take an object representing a person and information about whether they like to code
 
@@ -50,9 +50,15 @@ function createProfileDescription() {
   This is a good use case for String Template Literals:
   https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Template_literals
   */
+
+  if (user.likesToCode) {
+    return `My name is ${user.name} and I like to code.` ;
+  } else {
+    return `My name is ${user.name} and I don't like to code.`;
+  }
 }
 
-skipTest(
+runTest(
   "createProfileDescription() will create a sentence about a whether a person likes to code or not",
   function () {
     check(
