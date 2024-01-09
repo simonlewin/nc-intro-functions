@@ -2,8 +2,9 @@ const { check, runTest, skipTest } = require("../test-api/index.js");
 
 
 //Exercise 1
-function countProperties() {
+function countProperties(object) {
   // This function should take an object as its argument and return the total number of properties it contains
+  return Object.keys(object).length;
 }
 
 runTest(
