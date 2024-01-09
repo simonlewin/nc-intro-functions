@@ -46,14 +46,12 @@ function createProfileDescription(user) {
   https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Template_literals
   */
 
-  if (user.likesToCode) {
-    return `My name is ${user.name} and I like to code.`;
-  } else {
-    return `My name is ${user.name} and I don't like to code.`;
-  }
+  return `My name is ${user.name} and I ${
+    user.likesToCode ? "like" : "don't like"
+  } to code.`;
 }
 
-skipTest(
+runTest(
   "createProfileDescription() will create a sentence about a whether a person likes to code or not",
   function () {
     check(
