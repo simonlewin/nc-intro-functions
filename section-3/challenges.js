@@ -58,7 +58,7 @@ function createProfileDescription(user) {
   }
 }
 
-runTest(
+skipTest(
   "createProfileDescription() will create a sentence about a whether a person likes to code or not",
   function () {
     check(
@@ -71,13 +71,22 @@ runTest(
 );
 
 // Exercise 4
-function readTrafficLight() {
+function readTrafficLight(colour) {
   // This function should take a string representing a traffic light colour as an argument
   // It will be one of "red", "green" or "amber" in either uppercase or lowercase
   // You should return a corresponding message
+  if (colour.toLowerCase() === 'green') {
+    return 'GO!'
+  } else if (colour.toLowerCase() === 'amber') {
+    return 'GET READY...'
+  } else if (colour.toLowerCase() === 'red') {
+    return 'STOP!'
+  }
+  
+
 }
 
-skipTest(
+runTest(
   "readTrafficLight() should print a message according to the different colour passed in",
   function () {
     check(readTrafficLight("green")).isEqualTo("GO!");
