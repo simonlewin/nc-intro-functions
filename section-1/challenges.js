@@ -1,7 +1,7 @@
 const { check, runTest, skipTest } = require('../test-api/index.js');
 
 // Exercise 1
-runTest('checking multiTypeArray', function () {
+skipTest('checking multiTypeArray', function () {
   const multiTypeArray = ['I am a string', 42, true, [1, 2, 3]];
 
   check("string").isEqualTo(typeof multiTypeArray[0]);
@@ -12,17 +12,17 @@ runTest('checking multiTypeArray', function () {
 
 // Exercise 2
 // once you have passed the test above, change skipTest below to runTest so you are able to run the next test
-skipTest('checking alphaSample', function () {
+runTest('checking alphaSample', function () {
   const alphaSample = ['a', 'b', 'c'];
   alphaSample.push('d');
   alphaSample.push('g');
 
-  check(FILL_ME_IN).isEqualTo(alphaSample);
+  check(['a', 'b', 'c' ,'d', 'g']).isEqualTo(alphaSample);
 
   const lastItem = alphaSample.pop();
 
-  check(FILL_ME_IN).isEqualTo(lastItem);
-  check(FILL_ME_IN).isEqualTo(alphaSample);
+  check('g').isEqualTo(lastItem);
+  check(['a', 'b', 'c', 'd']).isEqualTo(alphaSample);
 });
 
 // Exercise 3
