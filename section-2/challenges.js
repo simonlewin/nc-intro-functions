@@ -8,7 +8,7 @@ function multiply(a, b) {
   return a * b;
 }
 
-runTest("multiply() can multiply 2 numbers together", function () {
+skipTest("multiply() can multiply 2 numbers together", function () {
   check(multiply(3, 5)).isEqualTo(15);
   check(multiply(17, 19)).isEqualTo(323);
   check(multiply(-180, 2)).isEqualTo(-360);
@@ -16,11 +16,13 @@ runTest("multiply() can multiply 2 numbers together", function () {
 
 // Challenge 1
 
-// roundDown() {}
+function roundDown(a) {
+  return Math.floor(a);
+}
 
 // This function should take a single argument and return its value rounded DOWN to the nearest integer.
 
-skipTest(
+runTest(
   "roundDown() returns the result of rounding down to the nearest integer",
   function () {
     check(roundDown(100.1)).isEqualTo(100);
