@@ -4,10 +4,10 @@ const { check, runTest, skipTest } = require('../test-api/index.js');
 runTest('checking multiTypeArray', function () {
   const multiTypeArray = ['I am a string', 42, true, [1, 2, 3]];
 
-  check(FILL_ME_IN).isEqualTo(typeof multiTypeArray[0]);
-  check(FILL_ME_IN).isEqualTo(typeof multiTypeArray[1]);
-  check(FILL_ME_IN).isEqualTo(typeof multiTypeArray[2]);
-  check(FILL_ME_IN).isEqualTo(typeof multiTypeArray[3]);
+  check("string").isEqualTo(typeof multiTypeArray[0]);
+  check("number").isEqualTo(typeof multiTypeArray[1]);
+  check("boolean").isEqualTo(typeof multiTypeArray[2]);
+  check("object").isEqualTo(typeof multiTypeArray[3]);
 });
 
 // Exercise 2
