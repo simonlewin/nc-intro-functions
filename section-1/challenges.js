@@ -27,7 +27,7 @@ skipTest('checking alphaSample', function () {
 
 // Exercise 3
 // once you have passed the test above, change skipTest below to runTest so you are able to run the next test
-runTest('working with nested arrays', function () {
+skipTest('working with nested arrays', function () {
   const rows = [
     ['a', 'b', 'c'],
     ['d', 'e', 'f'],
@@ -49,17 +49,17 @@ runTest('working with nested arrays', function () {
 
 // Exercise 4
 // once you have passed the test above, change skipTest below to runTest so you are able to run the next test
-skipTest('check object properties', function () {
+runTest('check object properties', function () {
   const father = {
     firstName: 'Michael',
     lastName: 'Bluth',
     age: 33,
   };
 
-  check(FILL_ME_IN).isEqualTo(father.firstName);
-  check(FILL_ME_IN).isEqualTo(father.lastName);
-  check(FILL_ME_IN).isEqualTo(father.firstname);
-  check(FILL_ME_IN).isEqualTo(father.age);
+  check('Michael').isEqualTo(father.firstName);
+  check('Bluth').isEqualTo(father.lastName);
+  check(undefined).isEqualTo(father.firstname);
+  check(33).isEqualTo(father.age);
 });
 
 // Exercise 5
