@@ -178,12 +178,16 @@ If the battery level is 100% then it should return a string stating:
 */
 
 // checkBatteryLevel()
-function checkBatteryLevel(level) {
+const checkBatteryLevel = (level) => {
   if (level <= 5) {
     return `Warning - battery level low: ${level}%, please charge your device`;
-  } else if (level > 5 && level <= 99) {
+  }
+
+  if (level > 5 && level <= 99) {
     return `Battery level: ${level}%`;
-  } else if (level === 100) {
+  }
+
+  if (level === 100) {
     return `Fully charged :)`;
   }
 }
