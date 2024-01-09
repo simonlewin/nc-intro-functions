@@ -142,10 +142,10 @@ The returned string should be in the following format:
 
 // getCharCode()
 function getCharCode(char) {
-  return `The ASCII code for ${char} is ${char.charCodeAt(0)}`
+  return `The ASCII code for ${char} is ${char.charCodeAt(0)}`;
 }
 
-runTest(
+skipTest(
   "getCharCode() will return a message stating the ASCII code of a passed char",
   function () {
     check(getCharCode("A")).isEqualTo("The ASCII code for A is 65");
@@ -162,8 +162,15 @@ runTest(
 // This function should take a length and a character as arguments and return an array of the given length populated with the given character.
 
 // createArray()
+function createArray(length, character) {
+  const array = [];
+  for (let i = 0; i < length; i++) {
+    array.push(character);
+  }
+  return array;
+}
 
-skipTest(
+runTest(
   "createArray() creates an array of the specified length using a specified character",
   function () {
     check(createArray(3, "!")).isEqualTo(["!", "!", "!"]);
