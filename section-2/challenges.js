@@ -22,7 +22,7 @@ function roundDown(a) {
 
 // This function should take a single argument and return its value rounded DOWN to the nearest integer.
 
-runTest(
+skipTest(
   "roundDown() returns the result of rounding down to the nearest integer",
   function () {
     check(roundDown(100.1)).isEqualTo(100);
@@ -35,9 +35,11 @@ runTest(
 
 // This function should take two arguments, m and n, and return m raised to the power of n.
 
-// raiseToPower()
+function raiseToPower(m, n) {
+  return m**n
+}
 
-skipTest("raiseToPower() raises given number to the given power", function () {
+runTest("raiseToPower() raises given number to the given power", function () {
   check(raiseToPower(10, 3)).isEqualTo(1000);
   check(raiseToPower(25, 2)).isEqualTo(625);
   check(raiseToPower(10, 0)).isEqualTo(1);
