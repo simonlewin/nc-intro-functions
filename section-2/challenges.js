@@ -36,7 +36,7 @@ skipTest(
 // This function should take two arguments, m and n, and return m raised to the power of n.
 
 function raiseToPower(m, n) {
-  return m**n
+  return m ** n;
 }
 
 skipTest("raiseToPower() raises given number to the given power", function () {
@@ -84,14 +84,14 @@ skipTest(
 
 // Challenge 5
 
-// This function should take a number as an argument representing a year, 
+// This function should take a number as an argument representing a year,
 // and return true if that year is in the 20th century and false otherwise.
 
 function isInThe20thCentury(n) {
   return n >= 1901 && n <= 2000;
 }
 
-runTest(
+skipTest(
   "isInThe20thCentury() checks if a number is within 1901 to 2000 (inclusive)",
   function () {
     check(isInThe20thCentury(1962)).isEqualTo(true);
@@ -111,8 +111,11 @@ runTest(
 // HINT: all absolute file paths start with a /
 
 // isAbsolutePath()
+function isAbsolutePath(path) {
+  return path.startsWith("/");
+}
 
-skipTest(
+runTest(
   "isAbsolutePath() checks if a file path is absolute or relative",
   function () {
     check(isAbsolutePath("/Users/mitch")).isEqualTo(true);
