@@ -39,7 +39,7 @@ function raiseToPower(m, n) {
   return m**n
 }
 
-runTest("raiseToPower() raises given number to the given power", function () {
+skipTest("raiseToPower() raises given number to the given power", function () {
   check(raiseToPower(10, 3)).isEqualTo(1000);
   check(raiseToPower(25, 2)).isEqualTo(625);
   check(raiseToPower(10, 0)).isEqualTo(1);
@@ -49,9 +49,11 @@ runTest("raiseToPower() raises given number to the given power", function () {
 
 // This function should take a number as an argument, and return true if it is a multiple of 6, and false otherwise.
 
-// isMultipleOf6()
+function isMultipleOf6(n) {
+  return n % 6 === 0;
+}
 
-skipTest(
+runTest(
   "isMultipleOf6() should check if a number is divisible by 6",
   function () {
     check(isMultipleOf6(6)).isEqualTo(true);
