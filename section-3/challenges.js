@@ -16,12 +16,10 @@ runTest(
 );
 
 //Exercise 2
-function isEmptyArray(array) {
-  // This function should take an array as an argument and return true if the array is empty, and false otherwise
-  return array.length === 0;
-}
+// This function should take an array as an argument and return true if the array is empty, and false otherwise
+const isEmptyArray = (array) => array.length === 0;
 
-skipTest("isEmptyArray() checks if an array is empty", function () {
+runTest("isEmptyArray() checks if an array is empty", function () {
   check(isEmptyArray([])).isEqualTo(true);
   check(isEmptyArray(["a", "b", "c", "d"])).isEqualTo(false);
   check(isEmptyArray(["a"])).isEqualTo(false);
