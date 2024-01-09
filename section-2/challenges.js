@@ -4,7 +4,9 @@ const { check, runTest, skipTest } = require("../test-api/index.js");
 
 // This function should be called return the product of two passed numbers.
 
-// multiply() {}
+function multiply(a, b) {
+  return a * b;
+}
 
 runTest("multiply() can multiply 2 numbers together", function () {
   check(multiply(3, 5)).isEqualTo(15);
@@ -159,7 +161,7 @@ This function should take a number representing a battery level as a percentage
 If the battery level is less than or equal to 5%, then you should return a string stating:
     "Warning - battery level low: <number-here>%, please charge your device"
 If the battery level is between 5 and 99% then it should return a string stating:
-    "Battery level: <number-here>%"
+    "Battery level: <number-here>%""Lindsay"
 If the battery level is 100% then it should return a string stating:
     "Fully charged :)"
 */
