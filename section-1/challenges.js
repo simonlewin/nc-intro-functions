@@ -12,7 +12,7 @@ skipTest('checking multiTypeArray', function () {
 
 // Exercise 2
 // once you have passed the test above, change skipTest below to runTest so you are able to run the next test
-runTest('checking alphaSample', function () {
+skipTest('checking alphaSample', function () {
   const alphaSample = ['a', 'b', 'c'];
   alphaSample.push('d');
   alphaSample.push('g');
@@ -27,24 +27,24 @@ runTest('checking alphaSample', function () {
 
 // Exercise 3
 // once you have passed the test above, change skipTest below to runTest so you are able to run the next test
-skipTest('working with nested arrays', function () {
+runTest('working with nested arrays', function () {
   const rows = [
     ['a', 'b', 'c'],
     ['d', 'e', 'f'],
     ['g', 'h', 'i'],
   ];
 
-  check(FILL_ME_IN).isEqualTo(rows[0]);
-  check(FILL_ME_IN).isEqualTo(rows[1]);
-  check(FILL_ME_IN).isEqualTo(rows[2]);
+  check(['a', 'b', 'c']).isEqualTo(rows[0]);
+  check(['d', 'e', 'f']).isEqualTo(rows[1]);
+  check(['g', 'h', 'i']).isEqualTo(rows[2]);
 
   const firstRow = rows[0];
   check(firstRow[0]).isEqualTo('a');
-  check(firstRow[FILL_ME_IN]).isEqualTo('b');
+  check(firstRow[1]).isEqualTo('b');
 
-  check(rows[1][FILL_ME_IN]).isEqualTo('e');
-  check(rows[2][FILL_ME_IN]).isEqualTo('g');
-  check(rows[0][FILL_ME_IN]).isEqualTo('c');
+  check(rows[1][1]).isEqualTo('e');
+  check(rows[2][0]).isEqualTo('g');
+  check(rows[0][2]).isEqualTo('c');
 });
 
 // Exercise 4
